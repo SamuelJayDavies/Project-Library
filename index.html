@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="title-container">
+            <h1>Your Library</h1>
+            <p>Welcome, what book are we choosing today?</p>
+        </div>
+        <div class="content-container">
+            <div class="table-area">
+                <table id="book-table">
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Number of Pages</th>
+                        <th>Has been Read</th>
+                        <th>Delete?</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="action-container">
+            <div class="action-title-container">
+                <h1>New Book</h1>
+                <button onclick="javascipt:alternateVisibility()">New Book</button>
+            </div>
+            <div class="action-form">
+                <form id="book-form" class="invisible">
+                    Title: <input type="text" name="titleName" required>
+                    Author: <input type="text" name="author" required>
+                    Number of Pages: <input type="number" name="numOfPages" required>
+                    Has been Read: <input type="text" name="hasRead" required>
+                    <input id="submit-button" type="submit">
+                </form>
+                <p id="validation-message" class="invisible">Has been Read needs to be either "true" or "false"</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>© Samuel Davies 2024</p>
+    </div>
+</body>
+<script src="script.js" ></script>
+</html>
