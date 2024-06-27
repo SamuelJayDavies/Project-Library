@@ -4,18 +4,20 @@ const form = document.getElementById("book-form");
 let myLibrary = [];
 let libraryIndexNum = 0;
 
-function Book(title, author, pages, hasRead) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.hasRead = hasRead;
+class Book {
+    constructor(title, author, pages, hasRead) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.hasRead = hasRead;
 
-    this.info = function() {
-        return this.title + " " + this.author + ", " + this.pages + " pages, " + (hasRead ? "has been read" : "not read yet"); 
-    }
+        this.info = function () {
+            return this.title + " " + this.author + ", " + this.pages + " pages, " + (hasRead ? "has been read" : "not read yet");
+        };
 
-    this.readToggle = function() {
-        this.hasRead = !this.hasRead;
+        this.readToggle = function () {
+            this.hasRead = !this.hasRead;
+        };
     }
 }
 
